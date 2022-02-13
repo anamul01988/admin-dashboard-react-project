@@ -1,0 +1,8 @@
+.register-portionb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.btn.btn-primary.btn-block {
+    font-size: 18px;
+}
