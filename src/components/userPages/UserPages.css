@@ -1,0 +1,9 @@
+.user-create input{
+      display: block;
+      text-align:center;
+      width: 340px;
+      height : 40px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: 2px solid #777;
+}

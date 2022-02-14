@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Home.css";
+import Pages from '../components/pages/Pages';
 const Dashboard = () => {
     return (
         <React.Fragment>
@@ -579,6 +580,14 @@ const Dashboard = () => {
             </ol>
           </div>
         </div>
+
+           <Pages/>
+
+
+
+
+
+
       </div>
     </div>
     <section className="content">
