@@ -1,9 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Userpages from "../userPages/UserPages";
-import './Pages.css';
-
-// const [searchTerm, setSearchTerm] = useState("");
+import "./Pages.css";
 
 const Pages = () => {
   const [record, setRecord] = useState([]);
@@ -26,12 +24,9 @@ const Pages = () => {
   }, []);
 
   const HandleSearch = (e) => {
-    e.preventDefault(); //aita form ta k auto refresh kora theke atkabe. sathe form ta k grabe korbe
+    e.preventDefault();
     console.log(record);
   };
-  //   const handleDelete = (id) => {
-  //     setData(data.filter((item) => item.id !== id));
-  //   };
 
   return (
     <div>
@@ -50,29 +45,44 @@ const Pages = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               ></input>
             </form>
-
-            {/* {record
-              .filter((val) => {
-                if (searchTerm == "") {
-                  // return val
-                } else if (
-                  val.username.toLowerCase().includes(searchTerm.toLowerCase())
-                ) {
-                  console.log(val);
-                  return val;
-                }
-              })
-              .map((val, key) => {
-                return (
-                  <div className="users" key={key}>
-                    <p className="usersName">{val.username}</p>
-                  </div>
-                );
-              })} */}
           </div>
         </div>
 
-        <div class="table-responsive">
+        <div>
+          <div className="table-responsive">
+            <table className="table">
+            <thead class="thead-light">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>UserName</th>
+                <th>Website</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {searchData()
+                .slice(0, 10)
+                .map((output) => (
+                  <tr>
+                    <td>{output.id}</td>
+                    <td>{output.name}</td>
+                    <td>{output.email}</td>
+                    <td>{output.username}</td>
+                    <td>{output.website}</td>
+                    <td><span class="edit">Edit</span> | <span class="delete">Delete</span></td>
+                 
+                  </tr>
+                ))}
+            </tbody>
+
+              </table>
+          </div>
+        </div>
+
+        {/* <div className="table-responsive">
+  
           <table class="table table-striped">
             <thead class="thead-light">
               <tr>
@@ -81,13 +91,9 @@ const Pages = () => {
                 <th>Email</th>
                 <th>UserName</th>
                 <th>Website</th>
+                <th>Action</th>
               </tr>
             </thead>
-
-            {/* <tbody>
-              {searchData.slice(0, 5).map((output) => {
-                  searchData();
-            </tbody> */}
 
             <tbody>
               {searchData()
@@ -99,62 +105,19 @@ const Pages = () => {
                     <td>{output.email}</td>
                     <td>{output.username}</td>
                     <td>{output.website}</td>
-                    <td></td>
+                    <td><span>Edit</span> | <span>Delete</span></td>
+                 
                   </tr>
                 ))}
             </tbody>
-            {/* <tbody>
-              {record.slice(0, 10).map((output) => (
-                <tr>
-                  <td>{output.id}</td>
-                  <td>{output.name}</td>
-                  <td>{output.email}</td>
-                  <td>{output.username}</td>
-                  <td>{output.website}</td>
-                  <td></td>
-                </tr>
-              ))}
-            </tbody> */}
+        
           </table>
 
-          {/* <form className="search-box" onSubmit={HandleSearch}>
-            <input
-              type="search"
-              placeholder="Search for an anime: "
-              required
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            ></input>
-          </form>
-
-          {record
-            .filter((val) => {
-              if (searchTerm == "") {
-                // return val
-              } else if (
-                val.username.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                console.log(val);
-                return val;
-              }
-            })
-            .map((val, key) => {
-              return (
-                <div className="users" key={key}>
-                  <p className="usersName">{val.username}</p>
-                </div>
-              );
-            })} */}
-        </div>
+       
+        </div> */}
       </div>
 
-
-    
-
-
-        <Userpages/>
-
-
+      <Userpages />
     </div>
   );
 };

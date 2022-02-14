@@ -1,14 +1,16 @@
 import React from 'react';
-import "./Home.css";
+import "./Dashboard.css";
+
 import Pages from '../components/pages/Pages';
+import Newuser from '../components/NewUser';
 const Dashboard = () => {
     return (
         <React.Fragment>
           <div className=" register-page">
           <div className="wrapper">
-  <div className="preloader flex-column justify-content-center align-items-center">
+  {/* <div className="preloader flex-column justify-content-center align-items-center">
     <img className="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height={60} width={60} />
-  </div>
+  </div> */}
   <nav className="main-header navbar navbar-expand navbar-white navbar-light">
     <ul className="navbar-nav">
       <li className="nav-item">
@@ -571,7 +573,8 @@ const Dashboard = () => {
       <div className="container-fluid">
         <div className="row mb-2">
           <div className="col-sm-6">
-            <h1 className="m-0">Dashboard</h1>
+            {/* <h1 className="m-0">Dashboard</h1> */}
+            <h1 className="m-0 text-center">Dashboard</h1>
           </div>
           <div className="col-sm-6">
             <ol className="breadcrumb float-sm-right">
@@ -581,6 +584,8 @@ const Dashboard = () => {
           </div>
         </div>
 
+         
+           <Newuser/>
            <Pages/>
 
 
@@ -595,10 +600,10 @@ const Dashboard = () => {
       </div>
     </section>
   </div>
-  <footer className="main-footer">
+  {/* <footer className="main-footer">
     <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
-  </footer>
+  </footer> */}
   <aside className="control-sidebar control-sidebar-dark">
   </aside>
 </div>

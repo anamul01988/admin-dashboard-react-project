@@ -1,0 +1,8 @@
+.content-wrapper{
+    height: auto;
+}
+.content-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: darkblue;
+}

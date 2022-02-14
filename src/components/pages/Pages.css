@@ -8,3 +8,11 @@ input.inputField.mt-3 {
     padding: 3px;
     margin-bottom: 15px;
 }
+.edit {
+    background: #06d2422b;
+    padding: 1px 3px;
+}
+span.delete {
+    background: lightblue;
+    padding: 1px 4px;
+}
